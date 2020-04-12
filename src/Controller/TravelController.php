@@ -15,6 +15,8 @@ class TravelController extends AbstractController
      * @return Response
      */
     public function index(): Response {
-        return $this->render("travel.html.twig");
+        return $this->render("travel.html.twig", [
+            "current_menu" => "travel"
+        ]);
     }
 }
