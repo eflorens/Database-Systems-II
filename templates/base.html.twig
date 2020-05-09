@@ -8,7 +8,7 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href={{ path("home") }}>TMS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,6 +22,19 @@
                    href={{ path("property") }}>Property</a>
             </li>
         </ul>
+        {% if app.user %}
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="{{ path('logout') }}" class="nav-link">Logout</a>
+                </li>
+            </ul>
+        {% else %}
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="{{ path('app_login') }}" class="nav-link">Login</a>
+                </li>
+            </ul>
+        {% endif %}
     </div>
 </nav>
 {% block body %}{% endblock %}
