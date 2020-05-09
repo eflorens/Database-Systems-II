@@ -41,13 +41,15 @@ class PropertyController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render("property.html.twig", [
+        return $this->render("property/index.html.twig", [
             "current_menu" => "property"
         ]);
     }
 
     /**
      * @Route(path="/property/{slug}-{id}", name="property.show", requirements={"slug": "[A-Za-z0-9\-]*"})
+     * @param PropertyEntity $property
+     * @param string $slug
      * @return Response
      */
     public function show(PropertyEntity $property, string $slug): Response
@@ -59,7 +61,7 @@ class PropertyController extends AbstractController
                     'id' => $property->getId()
                 ], 301);
         }
-        return $this->render("show.html.twig", [
+        return $this->render("property/show.html.twig", [
             "current_menu" => "property",
             "property" => $property
         ]);
