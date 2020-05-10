@@ -21,9 +21,6 @@ class HomeController extends AbstractController
     {
         $entities = $repository->findLatest();
 
-        $user = $this->getUser();
-        dump($user);
-
         return $this->render("home.html.twig", [
             "properties" => $entities
         ]);
