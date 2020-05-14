@@ -12,7 +12,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route(path="/login", name="app_login")
+     * @Route(path="/login", name="login")
      * @param AuthenticationUtils $authenticationUtils
      * @return Response
      */
@@ -21,7 +21,7 @@ class SecurityController extends AbstractController
         $user = $this->getUser();
         if ($user !== null) {
             return $this->redirectToRoute(
-                "home", [
+                "home.index", [
             ], 301);
         }
         // get the login error if there is one
