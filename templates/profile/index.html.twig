@@ -26,7 +26,14 @@
             {% for travel in travels %}
                 <tr>
                     <td> {{ travel.title }}</td>
-                    <td><a href="{{ path("profile.edit", {id: travel.id}) }}" class="btn btn-secondary">Edit</a></td>
+                    <td>
+                        <a href="{{ path("profile.edit", {id: travel.id}) }}" class="btn btn-secondary">
+                            Edit
+                        </a>
+                        <a href="{{ path("profile.delete", {id: travel.id}) }}" class="btn btn-danger">
+                            Delete
+                        </a>
+                    </td>
                 </tr>
             {% endfor %}
             </tbody>

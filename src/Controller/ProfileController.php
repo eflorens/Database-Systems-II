@@ -82,9 +82,11 @@ class ProfileController extends AbstractController
 
     /**
      * @Route(path="/profile/create", name="profile.create")
+     * @param Request $request
+     * @return Response
      */
-    public function create(Request $request) {
-
+    public function create(Request $request): Response
+    {
         $user = $this->getUser();
         if ($user === null) {
             $this->redirectToRoute("home.index");
@@ -107,4 +109,21 @@ class ProfileController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route(path="/profile/delete/{id}", name="profile.delete")
+     * @param Travel $travel
+     * @return Response
+     */
+    public function delete(Travel $travel): Response
+    {
+        $user = $this->getUser();
+        if ($user === null || $user->getId() !== $travel->getUser()) {
+            $this->redirectToRoute("home.index");
+        }
+
+        $this->manager->remove($travel);
+        $this->manager->flush();
+
+        return $this->redirectToRoute("profile.index");
+     }
 }
