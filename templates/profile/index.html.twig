@@ -1,13 +1,35 @@
 {% extends 'base.html.twig' %}
 
+{# @var travel \App\Entity\Travel #}
 {% block body %}
-    <div class="container text-center mt-4">
-        <h1>Check my travels !</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacinia mauris. Maecenas arcu enim,
-            sollicitudin eu risus quis, varius rhoncus turpis. Vivamus ut tincidunt velit. Sed ut eleifend est. Fusce
-            sollicitudin enim id sem blandit posuere. Donec non lectus ultrices velit efficitur semper. Donec a augue
-            eros. Sed mollis tincidunt felis, sit amet pretium sapien faucibus eget. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia Curae; Praesent odio mauris, finibus nec orci ut, feugiat
-            scelerisque justo. Sed non diam tellus. Cras iaculis dolor non maximus rutrum.</p>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between">
+            <div>
+                <h1 style="display:inline-block;">Your travels</h1>
+            </div>
+            <div>
+                <a type="submit" class="btn btn-primary text-right" href="{{ path('profile.create') }}">
+                    Create
+                </a>
+            </div>
+        </div>
+
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for travel in travels %}
+                <tr>
+                    <td> {{ travel.title }}</td>
+                    <td><a href="{{ path("profile.edit", {id: travel.id}) }}" class="btn btn-secondary">Edit</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock %}

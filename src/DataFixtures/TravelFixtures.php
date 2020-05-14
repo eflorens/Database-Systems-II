@@ -10,6 +10,8 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
+use Symfony\Component\Form\Extension\Core\Type\CountryType;
+use Symfony\Component\Intl\Countries;
 
 
 class TravelFixtures extends Fixture implements OrderedFixtureInterface
@@ -24,14 +26,18 @@ class TravelFixtures extends Fixture implements OrderedFixtureInterface
 
         for ($i = 0; $i < 100; $i++) {
             $random = $faker->numberBetween($min = 0, $max = 2);
-
             $owner = $users[$random];
-            $travel = new Travel();
 
+            $codes = Countries::getCountryCodes();
+            $randomCode = random_int(0, count($codes) - 1);
+
+            $country = $codes[$randomCode];
+
+            $travel = new Travel();
             $travel
                 ->setTitle($faker->words($nb = 3, $asText = true))
                 ->setDescription($faker->text($maxNbChars = 500))
-                ->setCountry($faker->country)
+                ->setCountry($country)
                 ->setUser($owner);
             $manager->persist($travel);
         }

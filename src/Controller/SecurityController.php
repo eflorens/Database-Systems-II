@@ -20,9 +20,7 @@ class SecurityController extends AbstractController
     {
         $user = $this->getUser();
         if ($user !== null) {
-            return $this->redirectToRoute(
-                "home.index", [
-            ], 301);
+            return $this->redirectToRoute("home.index");
         }
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
