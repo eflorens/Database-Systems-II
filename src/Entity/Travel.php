@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Intl\Countries;
 use Symfony\Component\String\Slugger\AsciiSlugger;
 
 /**
@@ -94,6 +95,11 @@ class Travel
         $this->country = $country;
 
         return $this;
+    }
+
+    public function getCountryName() {
+        $countryName = Countries::getName($this->country);
+        return $countryName;
     }
 
     public function getSlug(): string

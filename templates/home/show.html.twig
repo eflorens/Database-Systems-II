@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Page Content -->
+    <div class="container mt-4">
+
+        <div style="display: flex; justify-content: left; align-items: flex-end;">
+            <h1 class="mt-4" style="display:inline-block;">
+                {{ travel.title }}
+            </h1>
+            <p class="small align-text-bottom ml-2">
+                by {{ travel.user.username|upper }}
+            </p>
+        </div>
+        <p class="text-muted">Posted on {{ travel.formattedDate }}</p>
+        <span class="badge badge-secondary">{{ travel.countryName|upper }}</span>
+        <hr>
+
+        <p class="lead">
+            {{ travel.description }}
+        </p>
+        <hr>
+    </div>
+
+{% endblock %}

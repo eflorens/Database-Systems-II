@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+    {# @var travel \App\Entity\Travel #}
     <div class="jumbotron text-center">
         <h1>Travel Diary</h1>
         <h3>Your travel stories in one place</h3>
@@ -13,7 +14,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">
-                                <a href="#">{{ travel.title }}</a>
+                                <a href="{{ path('home.show', {id: travel.getId(), slug: travel.getSlug()}) }}">{{ travel.title }}</a>
                             </h5>
                             <p class="card-text">
                                 {{ travel.summary(100) }}
