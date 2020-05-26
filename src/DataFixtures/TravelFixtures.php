@@ -35,9 +35,12 @@ class TravelFixtures extends Fixture implements OrderedFixtureInterface
             $destination = $codes[$randomDestinationCode];
 
             $travel = new Travel();
+
+            $title = "Trip to " . Countries::getName($destination);
+
             $travel
-                ->setTitle($faker->words($nb = 3, $asText = true))
-                ->setDescription($faker->text($maxNbChars = 2000))
+                ->setTitle($title)
+                ->setDescription($faker->realText($maxNbChars = 2000, $indexSize = 2))
                 ->setOrigin($origin)
                 ->setDestination($destination)
                 ->setCost($faker->numberBetween(1000, 45000))
