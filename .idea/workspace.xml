@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04a334b-bcf9-4f27-8f86-80d63cd88f23" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/database_systems_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/database_systems_2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/TravelFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/TravelFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Travel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Travel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/TravelType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TravelType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TravelRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TravelRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/create.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/property/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/property/show.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +215,7 @@
       <workItem from="1589464601647" duration="33000" />
       <workItem from="1589464653426" duration="36000" />
       <workItem from="1589464702880" duration="19364000" />
-      <workItem from="1590497506069" duration="6650000" />
+      <workItem from="1590497506069" duration="8986000" />
     </task>
     <servers />
   </component>
@@ -250,10 +244,10 @@
     </state>
     <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589460033158" />
     <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589053649413" />
-    <state x="181" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590500060718">
+    <state x="181" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590505449828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="181" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590500060718" />
+    <state x="181" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590505449828" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589456623235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -297,10 +291,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586617826800" />
-    <state x="668" y="95" width="583" height="849" key="find.popup" timestamp="1589478603105">
+    <state x="668" y="95" width="583" height="849" key="find.popup" timestamp="1590505440033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="95" width="583" height="849" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589478603105" />
+    <state x="668" y="95" width="583" height="849" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590505440033" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1590499052537">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

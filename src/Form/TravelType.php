@@ -17,7 +17,8 @@ class TravelType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('country', CountryType::class)
+            ->add('origin', CountryType::class)
+            ->add('destination', CountryType::class)
             ->add('cost');
 
         $builder->add('rating', ChoiceType::class, [

@@ -13,7 +13,8 @@
             </p>
         </div>
         <p class="text-muted">Posted on {{ travel.formattedDate }}</p>
-        <span class="badge badge-secondary">{{ travel.countryName|upper }}</span>
+        <span class="badge badge-secondary">from {{ travel.originName|upper }}</span>
+        <span class="badge badge-secondary">to {{ travel.destinationName|upper }}</span>
         <span class="p-1 bg-primary font-weight-bold text-white rounded-circle float-right">{{ travel.getFormattedCost() }} €</span>
         <hr>
 
@@ -23,7 +24,7 @@
         <hr>
         <span class="heading">User Rating</span>
         {% for i in 1..travel.rating %}
-            <span class="fa fa-star" style=" color: orange;"></span>
+            <span class="fa fa-star" style="color: orange;"></span>
         {% endfor %}
 
         {% if travel.rating != 5 %}

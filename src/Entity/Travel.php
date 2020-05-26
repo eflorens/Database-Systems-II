@@ -33,7 +33,7 @@ class Travel
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $country;
+    private $origin;
 
     /**
      * @ORM\Column(type="datetime")
@@ -55,6 +55,11 @@ class Travel
      * @ORM\Column(type="integer")
      */
     private $rating;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $destination;
 
     public function __construct()
     {
@@ -96,20 +101,20 @@ class Travel
         return $summary . "...";
     }
 
-    public function getCountry(): ?string
+    public function getOrigin(): ?string
     {
-        return $this->country;
+        return $this->origin;
     }
 
-    public function setCountry(string $country): self
+    public function setOrigin(string $origin): self
     {
-        $this->country = $country;
+        $this->origin = $origin;
 
         return $this;
     }
 
-    public function getCountryName() {
-        return Countries::getName($this->country);
+    public function getOriginName() {
+        return Countries::getName($this->origin);
     }
 
     public function getSlug(): string
@@ -179,5 +184,21 @@ class Travel
         $this->rating = $rating;
 
         return $this;
+    }
+
+    public function getDestination(): ?string
+    {
+        return $this->destination;
+    }
+
+    public function setDestination(string $destination): self
+    {
+        $this->destination = $destination;
+
+        return $this;
+    }
+
+    public function getDestinationName() {
+        return Countries::getName($this->destination);
     }
 }
