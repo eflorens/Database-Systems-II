@@ -39,7 +39,7 @@ class ProfileController extends AbstractController
             $this->redirectToRoute("home.index");
         }
 
-        $travels = $this->travelRepository->findBy(['user' => $user]);
+        $travels = $this->travelRepository->findLatestByUser($user);
 
         return $this->render("profile/index.html.twig", [
             "current_menu" => "profile",

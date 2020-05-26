@@ -14,8 +14,17 @@
             </div>
 
             <div class="col-12">
-                {{ form_row(form.description) }}
+                {{ form_row(form.description, { "attr": {"rows": "6"} }) }}
             </div>
+
+            <div class="col-3">
+                {{ form_row(form.cost) }}
+            </div>
+
+            <div class="col-9">
+                {{ form_row(form.rating) }}
+            </div>
+
 
         </div>
         <button type="submit" class="btn btn-primary">Create</button>

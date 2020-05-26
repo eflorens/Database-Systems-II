@@ -5,6 +5,7 @@ namespace App\Entity;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Intl\Countries;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\String\Slugger\AsciiSlugger;
 
 /**
@@ -44,6 +45,16 @@ class Travel
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $cost;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $rating;
 
     public function __construct()
     {
@@ -98,8 +109,7 @@ class Travel
     }
 
     public function getCountryName() {
-        $countryName = Countries::getName($this->country);
-        return $countryName;
+        return Countries::getName($this->country);
     }
 
     public function getSlug(): string
@@ -136,9 +146,37 @@ class Travel
         return $this->user;
     }
 
-    public function setUser(?User $user): self
+    public function setUser(?UserInterface $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getCost(): ?int
+    {
+        return $this->cost;
+    }
+
+    public function setCost(int $cost): self
+    {
+        $this->cost = $cost;
+
+        return $this;
+    }
+
+    public function getFormattedCost(): string {
+        return number_format($this->cost, 0,'', ' ');
+    }
+
+    public function getRating(): ?int
+    {
+        return $this->rating;
+    }
+
+    public function setRating(int $rating): self
+    {
+        $this->rating = $rating;
 
         return $this;
     }

@@ -14,12 +14,23 @@
         </div>
         <p class="text-muted">Posted on {{ travel.formattedDate }}</p>
         <span class="badge badge-secondary">{{ travel.countryName|upper }}</span>
+        <span class="p-1 bg-primary font-weight-bold text-white rounded-circle float-right">{{ travel.getFormattedCost() }} €</span>
         <hr>
 
         <p class="lead">
             {{ travel.description }}
         </p>
         <hr>
+        <span class="heading">User Rating</span>
+        {% for i in 1..travel.rating %}
+            <span class="fa fa-star" style=" color: orange;"></span>
+        {% endfor %}
+
+        {% if travel.rating != 5 %}
+            {% for j in 1..(5 - travel.rating) %}
+                <span class="fa fa-star"></span>
+            {% endfor %}
+        {% endif %}
     </div>
 
 {% endblock %}

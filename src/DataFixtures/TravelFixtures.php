@@ -38,6 +38,8 @@ class TravelFixtures extends Fixture implements OrderedFixtureInterface
                 ->setTitle($faker->words($nb = 3, $asText = true))
                 ->setDescription($faker->text($maxNbChars = 2000))
                 ->setCountry($country)
+                ->setCost($faker->numberBetween(1000, 45000))
+                ->setRating($faker->numberBetween(0, 5))
                 ->setUser($owner);
             $manager->persist($travel);
         }
