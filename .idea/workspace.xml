@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d04a334b-bcf9-4f27-8f86-80d63cd88f23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/TravelFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/TravelFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200526150550.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,9 +285,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586617826800" />
-    <state x="668" y="95" width="583" height="849" key="find.popup" timestamp="1590505440033">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="534" y="75" width="595" height="673" key="find.popup" timestamp="1590681102257">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="534" y="75" width="595" height="673" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1590681102257" />
     <state x="668" y="95" width="583" height="849" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590505440033" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1590499052537">
       <screen x="0" y="0" width="1920" height="1040" />
