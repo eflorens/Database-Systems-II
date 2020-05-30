@@ -55,9 +55,58 @@ class Travel
      */
     private $destination;
 
+    public function __toString()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Itinerary", mappedBy="travel", fetch="EXTRA_LAZY")
+     */
+    private $itineraries;
+
+    /**
+     * Travel constructor.
+     */
     public function __construct()
     {
         $this->created_at = new DateTime();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTravelsDone()
+    {
+        return $this->travels_done;
+    }
+
+    /**
+     * @param mixed $travels_done
+     * @return Travel
+     */
+    public function setTravelsDone($travels_done)
+    {
+        $this->travels_done = $travels_done;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getItineraries()
+    {
+        return $this->itineraries;
+    }
+
+    /**
+     * @param mixed $itineraries
+     * @return Travel
+     */
+    public function setItineraries($itineraries)
+    {
+        $this->itineraries = $itineraries;
+        return $this;
     }
 
     public function getId(): ?int
@@ -107,7 +156,8 @@ class Travel
         return $this;
     }
 
-    public function getOriginName() {
+    public function getOriginName()
+    {
         return Countries::getName($this->origin);
     }
 
@@ -140,18 +190,6 @@ class Travel
         return $this;
     }
 
-    public function getUser(): ?User
-    {
-        return $this->user;
-    }
-
-    public function setUser(?UserInterface $user): self
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-
     public function getCost(): ?int
     {
         return $this->cost;
@@ -164,8 +202,9 @@ class Travel
         return $this;
     }
 
-    public function getFormattedCost(): string {
-        return number_format($this->cost, 0,'', ' ');
+    public function getFormattedCost(): string
+    {
+        return number_format($this->cost, 0, '', ' ');
     }
 
     public function getDestination(): ?string
@@ -180,7 +219,8 @@ class Travel
         return $this;
     }
 
-    public function getDestinationName() {
+    public function getDestinationName()
+    {
         return Countries::getName($this->destination);
     }
 }

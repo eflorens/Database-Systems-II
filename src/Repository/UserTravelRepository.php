@@ -3,10 +3,8 @@
 
 namespace App\Repository;
 
-use App\Entity\Travel;
 use App\Entity\UserTravel;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\ORM\Query\Expr\Join;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -25,16 +23,12 @@ class UserTravelRepository extends ServiceEntityRepository
 
     public function findTravelById($travelId)
     {
-        try {
-            return $this->createQueryBuilder("userTravel")
-                ->select("userTravel")
-                ->join("userTravel.travel", 't', Join::WITH, "userTravel.travel = t.id")
-                ->where("userTravel.travel = (:id)")
-                ->setParameter("id", $travelId)
-                ->getQuery()
-                ->getOneOrNullResult();
-        } catch (NonUniqueResultException $e) {
-            dd($e->getTraceAsString());
-        }
+        return $this->createQueryBuilder("userTravel")
+            ->select("userTravel")
+            ->join("userTravel.travel", 't', Join::WITH, "userTravel.travel = t.id")
+            ->where("userTravel.travel = (:id)")
+            ->setParameter("id", $travelId)
+            ->getQuery()
+            ->getOneOrNullResult();
     }
 }

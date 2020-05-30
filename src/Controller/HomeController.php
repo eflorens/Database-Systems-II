@@ -6,6 +6,8 @@ namespace App\Controller;
 
 use App\Entity\Travel;
 use App\Repository\TravelRepository;
+use App\Repository\UserRepository;
+use App\Repository\UserTravelRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -33,7 +35,7 @@ class HomeController extends AbstractController
      * @param string $slug
      * @return Response
      */
-    public function show(Travel $travel, string $slug): Response
+    public function show(Travel $travel, string $slug, UserRepository $repository): Response
     {
         if ($travel->getSlug() !== $slug) {
             return $this->redirectToRoute(
@@ -42,8 +44,12 @@ class HomeController extends AbstractController
                 'id' => $travel->getId()]
             );
         }
+
+        $user = $repository->findOneBy(['username' => 'florian']);
+
         return $this->render("home/show.html.twig", [
-            "travel" => $travel
+            "travel" => $travel,
+            "user" => $user
         ]);
     }
 

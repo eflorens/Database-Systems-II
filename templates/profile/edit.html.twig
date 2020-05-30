@@ -3,34 +3,55 @@
 {% block body %}
 
     <div class="container mt-4">
-        <h2>Edit your travel</h2>
+        <h2>Edit a travel</h2>
         {{ form_start(form) }}
         <div class="row">
             <div class="col-12">
-                {{ form_row(form.title) }}
+                {{ form_row(form.travel.title) }}
             </div>
 
             <div class="col-6">
-                {{ form_row(form.origin) }}
-            </div>
-
-            <div class="col-6">
-                {{ form_row(form.destination) }}
+                {{ form_row(form.travel.origin) }}
             </div>
 
             <div class="col-12">
-                {{ form_row(form.description, { "attr": {"rows": "6"} }) }}
+                {{ form_row(form.travel.destination) }}
+            </div>
+
+            <div class="col-12">
+                {{ form_row(form.travel.description, { "attr": {"rows": "6"} }) }}
             </div>
 
             <div class="col-3">
-                {{ form_row(form.cost) }}
+                {{ form_label(form.travel.cost, "Total Cost") }}
+                {{ form_widget(form.travel.cost) }}
             </div>
 
+
+            <div class="col-12">
+                <hr>
+                <h2 class="mb-4 mt-4"> Edit a location </h2>
+            </div>
+
+            <div class="col-3">
+                {{ form_row(form.location.city) }}
+            </div>
             <div class="col-9">
-                {{ form_row(form.rating) }}
+                {{ form_row(form.location.country) }}
+            </div>
+
+            <div class="col-6">
+                {{ form_row(form.cost) }}
+            </div>
+            <div class="col-6">
+                {{ form_row(form.transportation) }}
+            </div>
+
+            <div class="col-12">
+                {{ form_row(form.location.description, { "attr": {"rows": "6"} }) }}
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary mb-5">Submit</button>
         {{ form_end(form) }}
     </div>
 

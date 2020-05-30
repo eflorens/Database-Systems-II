@@ -9,7 +9,7 @@
                 {{ travel.title }}
             </h1>
             <p class="small align-text-bottom ml-2">
-                by {{ travel.user.username|upper }}
+                by {{ user.username|upper }}
             </p>
         </div>
         <p class="text-muted">Posted on {{ travel.formattedDate }}</p>
@@ -18,20 +18,22 @@
         <span class="p-1 bg-primary font-weight-bold text-white rounded-circle float-right">{{ travel.getFormattedCost() }} €</span>
         <hr>
 
-        <p class="lead">
-            {{ travel.description }}
-        </p>
+        <div class="col-12">
+            <p class="lead">
+                {{ travel.description }}
+            </p>
+        </div>
         <hr>
-        <span class="heading">User Rating</span>
-        {% for i in 1..travel.rating %}
-            <span class="fa fa-star" style="color: orange;"></span>
-        {% endfor %}
+{#        <span class="heading">User Rating</span>#}
+{#        {% for i in 1..travel.rating %}#}
+{#            <span class="fa fa-star" style="color: orange;"></span>#}
+{#        {% endfor %}#}
 
-        {% if travel.rating != 5 %}
-            {% for j in 1..(5 - travel.rating) %}
-                <span class="fa fa-star"></span>
-            {% endfor %}
-        {% endif %}
+{#        {% if travel.rating != 5 %}#}
+{#            {% for j in 1..(5 - travel.rating) %}#}
+{#                <span class="fa fa-star"></span>#}
+{#            {% endfor %}#}
+{#        {% endif %}#}
     </div>
 
 {% endblock %}

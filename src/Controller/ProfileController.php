@@ -4,9 +4,13 @@
 namespace App\Controller;
 
 
+use App\Entity\Itinerary;
+use App\Entity\Location;
 use App\Entity\Travel;
 use App\Entity\UserTravel;
+use App\Form\ItineraryType;
 use App\Form\TravelType;
+use App\Repository\ItineraryRepository;
 use App\Repository\TravelRepository;
 use App\Repository\UserTravelRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -63,9 +67,10 @@ class ProfileController extends AbstractController
      * @Route(path="/profile/{id}", name="profile.edit", requirements={"id": "[0-9]*"})
      * @param int $id
      * @param Request $request
+     * @param ItineraryRepository $repository
      * @return Response
      */
-    public function edit(int $id, Request $request): Response
+    public function edit(int $id, Request $request, ItineraryRepository $repository): Response
     {
         $user = $this->getUser();
         if ($user === null) {
@@ -78,10 +83,14 @@ class ProfileController extends AbstractController
             return $this->redirectToRoute("profile.index");
         }
 
-        $form = $this->createForm(TravelType::class, $travel);
+        $itinerary = $repository->findOneBy(['travel' => $id]);
+
+        $form = $this->createForm(ItineraryType::class, $itinerary);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->manager->persist($itinerary);
+
             $this->manager->flush();
             return $this->redirectToRoute("profile.index");
         }
@@ -104,27 +113,28 @@ class ProfileController extends AbstractController
             $this->redirectToRoute("home.index");
         }
 
+        $itinerary = new Itinerary();
+
+        $location = new Location();
+        $itinerary->setLocation($location);
+
         $travel = new Travel();
-        $form = $this->createForm(TravelType::class, $travel);
+        $itinerary->setTravel($travel);
+
+        $form = $this->createForm(ItineraryType::class, $itinerary);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $rating = $form['rating']->getData();
-            $user_travel = new UserTravel();
-            $user_travel->setUser($user)
-                ->setTravel($travel)
-                ->setRating($rating);
-
-            $travel->setUser($user);
+            $this->manager->persist($location);
             $this->manager->persist($travel);
-            $this->manager->persist($user_travel);
+            $this->manager->persist($itinerary);
 
             $this->manager->flush();
             return $this->redirectToRoute("profile.index");
         }
 
         return $this->render("profile/create.html.twig", [
-            "travel" => $travel,
+            "travel" => $itinerary,
             "form" => $form->createView()
         ]);
     }
