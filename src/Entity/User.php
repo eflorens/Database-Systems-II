@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping as ORM;
 use Serializable;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -33,6 +34,29 @@ class User implements UserInterface, Serializable
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\UserTravel", mappedBy="user", fetch="EXTRA_LAZY")
+     */
+    private $user_travels;
+
+    /**
+     * @return mixed
+     */
+    public function getUserTravels()
+    {
+        return $this->user_travels;
+    }
+
+    /**
+     * @param mixed $user_travels
+     * @return User
+     */
+    public function setUserTravels($user_travels)
+    {
+        $this->user_travels = $user_travels;
+        return $this;
+    }
 
     public function getId(): ?int
     {

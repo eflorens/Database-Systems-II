@@ -5,7 +5,6 @@ namespace App\Repository;
 use App\Entity\Travel;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @method Travel|null find($id, $lockMode = null, $lockVersion = null)
@@ -20,19 +19,19 @@ class TravelRepository extends ServiceEntityRepository
         parent::__construct($registry, Travel::class);
     }
 
-    public function findLatestByUser(UserInterface $user) {
-        return $this->createQueryBuilder("travel")
-            ->where("travel.user = ?1")
-            ->orderBy("travel.created_at", "DESC")
-            ->setParameter(1, $user->getId())
-            ->getQuery()
-            ->getResult();
-    }
-
     public function findLatest()
     {
         return $this->createQueryBuilder("travel")
             ->setMaxResults(12)
+            ->orderBy("travel.created_at", "DESC")
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findSortedTravels($ids) {
+        return $this->createQueryBuilder("travel")
+            ->where("travel.id IN (:ids)")
+            ->setParameter('ids', $ids)
             ->orderBy("travel.created_at", "DESC")
             ->getQuery()
             ->getResult();

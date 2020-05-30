@@ -6,6 +6,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Travel;
 use App\Entity\User;
+use App\Entity\UserTravel;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
@@ -44,9 +45,15 @@ class TravelFixtures extends Fixture implements OrderedFixtureInterface
                 ->setOrigin($origin)
                 ->setDestination($destination)
                 ->setCost($faker->numberBetween(1000, 45000))
-                ->setRating($faker->numberBetween(1, 5))
                 ->setUser($owner);
+
+            $user_travel = new UserTravel();
+            $user_travel->setRating($faker->numberBetween(1, 5));
+            $user_travel->setUser($owner);
+            $user_travel->setTravel($travel);
+
             $manager->persist($travel);
+            $manager->persist($user_travel);
         }
 
         $manager->flush();

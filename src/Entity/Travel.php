@@ -41,20 +41,14 @@ class Travel
     private $created_at;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\OneToMany(targetEntity="App\Entity\UserTravel", mappedBy="travel", fetch="EXTRA_LAZY")
      */
-    private $user;
+    private $travels_done;
 
     /**
      * @ORM\Column(type="integer")
      */
     private $cost;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $rating;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -172,18 +166,6 @@ class Travel
 
     public function getFormattedCost(): string {
         return number_format($this->cost, 0,'', ' ');
-    }
-
-    public function getRating(): ?int
-    {
-        return $this->rating;
-    }
-
-    public function setRating(int $rating): self
-    {
-        $this->rating = $rating;
-
-        return $this;
     }
 
     public function getDestination(): ?string

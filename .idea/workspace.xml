@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04a334b-bcf9-4f27-8f86-80d63cd88f23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200526150550.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PropertyController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/TravelFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/TravelFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Travel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Travel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/TravelType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TravelType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PropertyRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TravelRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TravelRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +156,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -229,15 +238,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="686" y="234" key="#Unnamed/0.0.1920.1040@0.0.1920.1040" timestamp="1586618660905" />
-    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586709134238">
+    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590849285085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586709134238" />
-    <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1589460033158">
+    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590849285085" />
+    <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1590850083105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589460033158" />
-    <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589053649413" />
+    <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590850083105" />
     <state x="181" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590505449828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -247,35 +256,39 @@
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589456623235" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589117717233" />
-    <state width="1294" height="275" key="GridCell.Tab.0.bottom" timestamp="1589451708246">
+    <state width="1293" height="275" key="GridCell.Tab.0.bottom" timestamp="1590852187745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1294" height="275" key="GridCell.Tab.0.bottom/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589451708246" />
-    <state width="1294" height="275" key="GridCell.Tab.0.center" timestamp="1589451708246">
+    <state width="1293" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590852187745" />
+    <state width="1293" height="275" key="GridCell.Tab.0.center" timestamp="1590852187745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1294" height="275" key="GridCell.Tab.0.center/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589451708246" />
-    <state width="1294" height="275" key="GridCell.Tab.0.left" timestamp="1589451708246">
+    <state width="1293" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590852187745" />
+    <state width="1293" height="275" key="GridCell.Tab.0.left" timestamp="1590852187745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1294" height="275" key="GridCell.Tab.0.left/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589451708246" />
-    <state width="1294" height="275" key="GridCell.Tab.0.right" timestamp="1589451708246">
+    <state width="1293" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590852187745" />
+    <state width="1293" height="275" key="GridCell.Tab.0.right" timestamp="1590852187745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1294" height="275" key="GridCell.Tab.0.right/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589451708246" />
-    <state x="700" y="354" key="NewPhpClassDialog" timestamp="1589451992837">
+    <state width="1293" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590852187745" />
+    <state x="700" y="354" key="NewPhpClassDialog" timestamp="1590853947503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="700" y="354" key="NewPhpClassDialog/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589451992837" />
-    <state x="700" y="354" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589117647396" />
+    <state x="700" y="354" key="NewPhpClassDialog/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1590853947503" />
+    <state x="700" y="354" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590847980306" />
     <state x="794" y="451" key="NewPhpFileDialog" timestamp="1589486274169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="451" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589486274169" />
-    <state x="582" y="119" key="SettingsEditor" timestamp="1589464840496">
+    <state x="582" y="119" key="SettingsEditor" timestamp="1590847734314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="582" y="119" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589464840496" />
+    <state x="582" y="119" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590847734314" />
     <state x="853" y="402" width="312" height="263" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1589466371853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -28,7 +28,8 @@ class TravelType extends AbstractType
                 'Average' => 3,
                 'Good' => 4,
                 'Excellent' => 5
-            ]
+            ],
+            'mapped' => false
         ]);
     }
 
