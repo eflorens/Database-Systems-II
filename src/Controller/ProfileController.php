@@ -9,7 +9,6 @@ use App\Entity\Location;
 use App\Entity\Travel;
 use App\Entity\UserTravel;
 use App\Form\ItineraryType;
-use App\Form\TravelType;
 use App\Repository\ItineraryRepository;
 use App\Repository\TravelRepository;
 use App\Repository\UserTravelRepository;
@@ -77,26 +76,45 @@ class ProfileController extends AbstractController
             $this->redirectToRoute("home.index");
         }
 
+        // Get the travel entity associated with the id
         $travel = $this->travelRepository->findOneBy(["id" => $id]);
+        $userTravel = $this->userTravelRepository->findOneBy(['travel' => $id]);
 
         if ($travel === null) {
             return $this->redirectToRoute("profile.index");
         }
 
-        $itinerary = $repository->findOneBy(['travel' => $id]);
+        $itineraries = $travel->getItineraries();
+        $locations = [];
 
-        $form = $this->createForm(ItineraryType::class, $itinerary);
+        foreach ($itineraries as $itinerary) {
+            $locations[] = $itinerary->getLocation();
+        }
+
+        $data = new Itinerary();
+        $data->setTravel($travel);
+        $data->setLocation($locations);
+
+        $form = $this->createForm(ItineraryType::class, $data, ['rating' => $userTravel->getRating()]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->manager->persist($itinerary);
+            foreach ($locations as $location) {
+                $this->manager->persist($location);
+            }
+
+            $rating = $form->get('rating')->getData();
+            $userTravel->setRating($rating);
+            $this->manager->persist($userTravel);
+
+            $this->manager->persist($travel);
 
             $this->manager->flush();
             return $this->redirectToRoute("profile.index");
         }
 
         return $this->render("profile/edit.html.twig", [
-            "travel" => $travel,
+            "travel" => $data,
             "form" => $form->createView()
         ]);
     }
@@ -113,28 +131,44 @@ class ProfileController extends AbstractController
             $this->redirectToRoute("home.index");
         }
 
-        $itinerary = new Itinerary();
+        $data = new Itinerary();
 
         $location = new Location();
-        $itinerary->setLocation($location);
+        $locations[] = $location;
+        $data->setLocation($locations);
 
-        $travel = new Travel();
-        $itinerary->setTravel($travel);
-
-        $form = $this->createForm(ItineraryType::class, $itinerary);
+        $form = $this->createForm(ItineraryType::class, $data);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->manager->persist($location);
+            $rating = $form->get('rating')->getData();
+            $travel = $form->get('travel')->getData();
+            $locations = $form->get('location')->getData();
+
+            foreach ($locations as $location) {
+                $itinerary = new Itinerary();
+                $itinerary->setLocation($location);
+                $itinerary->setTravel($travel);
+
+                $this->manager->persist($location);
+                $this->manager->persist($itinerary);
+            }
+
+            $userTravel = new UserTravel();
+            $userTravel
+                ->setTravel($travel)
+                ->setUser($user)
+                ->setRating($rating);
+
             $this->manager->persist($travel);
-            $this->manager->persist($itinerary);
+            $this->manager->persist($userTravel);
 
             $this->manager->flush();
             return $this->redirectToRoute("profile.index");
         }
 
         return $this->render("profile/create.html.twig", [
-            "travel" => $itinerary,
+            "travel" => $data,
             "form" => $form->createView()
         ]);
     }
@@ -151,6 +185,8 @@ class ProfileController extends AbstractController
             $this->redirectToRoute("home.index");
         }
 
+
+        dd('Trying to delete travel with id ' . $travel->getId());
         $user_travel = $this->manager->getRepository("App:UserTravel")->findOneBy([
             'user' => $user,
             'travel' => $travel

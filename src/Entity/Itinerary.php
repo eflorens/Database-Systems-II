@@ -31,15 +31,7 @@ class Itinerary
      */
     private $location;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $cost;
 
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $transportation;
 
     /**
      * @return mixed

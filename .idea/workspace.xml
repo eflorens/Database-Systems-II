@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04a334b-bcf9-4f27-8f86-80d63cd88f23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Travel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Travel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/TravelType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TravelType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserTravelRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserTravelRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Itinerary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Itinerary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Location.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Location.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ItineraryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ItineraryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/LocationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/LocationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200528161855.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200530143340.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200530143746.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200530182430.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/create.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/edit.html.twig" afterDir="false" />
     </list>
@@ -20,6 +25,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -137,6 +149,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aOrQY2GYJQYQo79vyGb5DAhByW" />
@@ -149,21 +162,23 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/embed-collection-of-forms-master" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Florian\Desktop\database_systems_2\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Florian\Desktop\database_systems_2\templates\home" />
       <recent name="C:\Users\Florian\Desktop\database_systems_2\src\Controller" />
       <recent name="C:\Users\Florian\Desktop\database_systems_2\templates\property" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Florian\Desktop\database_systems_2\templates" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -241,20 +256,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590876709509" />
-    <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1590868349416">
+    <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1591543867396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589460033158" />
-    <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590868349416" />
+    <state x="762" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1591543867396" />
     <state x="181" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590876121421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="181" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590876121421" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590875958672">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591543813756">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589456623235" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590875958672" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591543813756" />
+    <state x="707" y="351" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1591554596806">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="707" y="351" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1591554596806" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590864310065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -279,11 +298,11 @@
     </state>
     <state width="1294" height="275" key="GridCell.Tab.0.right/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589451708246" />
     <state width="1293" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590852187745" />
-    <state x="700" y="354" key="NewPhpClassDialog" timestamp="1590876242841">
+    <state x="700" y="354" key="NewPhpClassDialog" timestamp="1591541989457">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="700" y="354" key="NewPhpClassDialog/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1590853947503" />
-    <state x="700" y="354" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590876242841" />
+    <state x="700" y="354" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591541989457" />
     <state x="794" y="451" key="NewPhpFileDialog" timestamp="1589486274169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -310,10 +329,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590499052537" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590878473109">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591555736005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589452658370" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590878473109" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591555736005" />
   </component>
 </project>

@@ -36,6 +36,70 @@ class Location
      */
     private $locations;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $cost;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $transportation;
+
+    /**
+     * @return mixed
+     */
+    public function getLocations()
+    {
+        return $this->locations;
+    }
+
+    /**
+     * @param mixed $locations
+     * @return Location
+     */
+    public function setLocations($locations)
+    {
+        $this->locations = $locations;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCost()
+    {
+        return $this->cost;
+    }
+
+    /**
+     * @param mixed $cost
+     * @return Location
+     */
+    public function setCost($cost)
+    {
+        $this->cost = $cost;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTransportation()
+    {
+        return $this->transportation;
+    }
+
+    /**
+     * @param mixed $transportation
+     * @return Location
+     */
+    public function setTransportation($transportation)
+    {
+        $this->transportation = $transportation;
+        return $this;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
