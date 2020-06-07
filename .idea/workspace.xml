@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04a334b-bcf9-4f27-8f86-80d63cd88f23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Itinerary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Itinerary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Location.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Location.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ItineraryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ItineraryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/LocationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/LocationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200528161855.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200530143340.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200530143746.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200530182430.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/edit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +221,7 @@
       <workItem from="1589464702880" duration="19364000" />
       <workItem from="1590497506069" duration="10058000" />
       <workItem from="1590874034993" duration="5490000" />
+      <workItem from="1591566317485" duration="2023000" />
     </task>
     <servers />
   </component>
