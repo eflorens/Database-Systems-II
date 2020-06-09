@@ -185,14 +185,6 @@ class ProfileController extends AbstractController
             $this->redirectToRoute("home.index");
         }
 
-
-        dd('Trying to delete travel with id ' . $travel->getId());
-        $user_travel = $this->manager->getRepository("App:UserTravel")->findOneBy([
-            'user' => $user,
-            'travel' => $travel
-        ]);
-
-        $this->manager->remove($user_travel);
         $this->manager->remove($travel);
 
         $this->manager->flush();

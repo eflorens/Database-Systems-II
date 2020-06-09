@@ -4,6 +4,8 @@
     <list default="true" id="d04a334b-bcf9-4f27-8f86-80d63cd88f23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200607153307.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200607220002.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +223,11 @@
       <workItem from="1589464702880" duration="19364000" />
       <workItem from="1590497506069" duration="10058000" />
       <workItem from="1590874034993" duration="5490000" />
-      <workItem from="1591566317485" duration="2023000" />
+      <workItem from="1591566317485" duration="2876000" />
+      <workItem from="1591607995382" duration="921000" />
+      <workItem from="1591699965972" duration="16000" />
+      <workItem from="1591700004560" duration="440000" />
+      <workItem from="1591701465946" duration="345000" />
     </task>
     <servers />
   </component>
