@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d04a334b-bcf9-4f27-8f86-80d63cd88f23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200607153307.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200607220002.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Itinerary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Itinerary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Location.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Location.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200609105629.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200609105629.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +162,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -228,6 +231,7 @@
       <workItem from="1591699965972" duration="16000" />
       <workItem from="1591700004560" duration="440000" />
       <workItem from="1591701465946" duration="345000" />
+      <workItem from="1591793408596" duration="2858000" />
     </task>
     <servers />
   </component>
@@ -260,11 +264,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="181" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590876121421" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591543813756">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591795874620">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589456623235" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591543813756" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591795874620" />
     <state x="707" y="351" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1591554596806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -302,10 +306,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="451" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589486274169" />
-    <state x="582" y="119" key="SettingsEditor" timestamp="1590847734314">
+    <state x="582" y="119" key="SettingsEditor" timestamp="1591793604164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="582" y="119" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590847734314" />
+    <state x="582" y="119" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591793604164" />
     <state x="853" y="402" width="312" height="263" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1589466371853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -324,10 +328,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590499052537" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591555736005">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591793501898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-3840.-749.1536.848/0.0.1920.1040@0.0.1920.1040" timestamp="1589452658370" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591555736005" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591793501898" />
   </component>
 </project>

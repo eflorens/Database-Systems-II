@@ -86,41 +86,4 @@ class Itinerary
         $this->location = $location;
         return $this;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getCost()
-    {
-        return $this->cost;
-    }
-
-    /**
-     * @param mixed $cost
-     * @return Itinerary
-     */
-    public function setCost($cost)
-    {
-        $this->cost = $cost;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTransportation()
-    {
-        return $this->transportation;
-    }
-
-    /**
-     * @param mixed $transportation
-     * @return Itinerary
-     */
-    public function setTransportation($transportation)
-    {
-        $this->transportation = $transportation;
-        return $this;
-    }
-
 }

@@ -45,10 +45,16 @@ class HomeController extends AbstractController
             );
         }
 
+        $itineraries = $travel->getItineraries();
+        $locations = [];
+        foreach ($itineraries as $itinerary) {
+            $locations[] = $itinerary->getLocation();
+        }
         $user = $repository->findOneBy(['username' => 'florian']);
 
         return $this->render("home/show.html.twig", [
             "travel" => $travel,
+            "locations" => $locations,
             "user" => $user
         ]);
     }

@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Intl\Countries;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\LocationRepository")
@@ -139,5 +140,15 @@ class Location
         $this->description = $description;
 
         return $this;
+    }
+
+    public function getFullCountryName()
+    {
+        return Countries::getName($this->country);
+    }
+
+    public function getFormattedCost(): string
+    {
+        return number_format($this->cost, 0, '', ' ');
     }
 }

@@ -25,7 +25,7 @@
             <tbody>
             {% for travel in travels %}
                 <tr>
-                    <td> {{ travel.title }}</td>
+                    <td> <a href="{{ path('home.show', {id: travel.getId(), slug: travel.getSlug()}) }}">{{ travel.title }}</td>
                     <td>
                         <a href="{{ path("profile.edit", {id: travel.id}) }}" class="btn btn-secondary">
                             Edit

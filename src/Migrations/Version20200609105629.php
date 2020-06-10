@@ -7,19 +7,12 @@ namespace DoctrineMigrations;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
-/**
- * Auto-generated Migration: Please modify to your needs!
- */
+
 final class Version20200609105629 extends AbstractMigration
 {
-    public function getDescription() : string
-    {
-        return '';
-    }
 
-    public function up(Schema $schema) : void
+    public function up(Schema $schema): void
     {
-        // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('CREATE TABLE itinerary (id INT AUTO_INCREMENT NOT NULL, travel_id INT NOT NULL, location_id INT NOT NULL, INDEX IDX_FF2238F664D218E (location_id), INDEX IDX_FF2238F6ECAB15B3 (travel_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE `utf8_unicode_ci` ENGINE = InnoDB COMMENT = \'\' ');
@@ -40,9 +33,8 @@ final class Version20200609105629 extends AbstractMigration
         $this->addSql('CREATE TABLE user_travel (id INT AUTO_INCREMENT NOT NULL, user_id INT NOT NULL, travel_id INT NOT NULL, rating INT NOT NULL, INDEX IDX_485970F3A76ED395 (user_id), INDEX IDX_485970F3ECAB15B3 (travel_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE `utf8_unicode_ci` ENGINE = InnoDB COMMENT = \'\' ');
     }
 
-    public function down(Schema $schema) : void
+    public function down(Schema $schema): void
     {
-        // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('DROP TABLE itinerary');
